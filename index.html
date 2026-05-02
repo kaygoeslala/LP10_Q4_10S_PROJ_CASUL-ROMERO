@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blissful Brews</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: url(https://i.pinimg.com/736x/d5/91/b2/d591b20d5b14f4e4bd94511b5cf74bd9.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+    padding-top: 80px;
+    color: #2f4f4f;
+}
+
+
+.navbar {
+    background-color: #e6f7ff !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand span {
+    color: #4aa3d8;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #4aa3d8 !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #7ec8e3 !important;
+    transform: translateY(-2px);
+}
+
+
+.main-card, .container-box {
+    background: white;
+    max-width: 900px;
+    width: 92%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+
+h1 {
+    color: #4aa3d8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    color: #4aa3d8;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #7ec8e3;
+    box-shadow: 0 0 5px rgba(126,200,227,0.5);
+}
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7ec8e3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #4aa3d8;
+    transform: scale(1.02);
+}
+          .card:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+            }
+
+
+.output-box, #plot {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f4fbff;
+    border-radius: 10px;
+    border: 1px solid #cceeff;
+    min-height: 40px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;      /* fixed height */
+    object-fit: cover;  /* crops nicely */
+    border-radius: 10px;
+}
+
+.card-body p {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.card-body br {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+</style>
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="sapph.jpg" width="40" height="40" class="rounded-circle me-2">
+      <span class="fw-bold" style="color:#4aa3d8;">Sapphire Class</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span>☰</span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index3.html">Classmates</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html">Attendance Tracker</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Gallery</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"> ♡ Camping 2026 ⛺️ ♡</div>
+                    <div class="card-body text-center">
+                        <img src="CAMPING.png" class="card-img-top mx-auto mb-3" alt="Chocolate Peanut Butter Banana Bark">
+                        <p> Our camping was held in January 2026. It taught us valuable skills on leadership, excellence, and independence. It was so much fun, we stayed at Preziosa Farms for an overnight stay.  We sang, we had fun, and we took care of our garde 6 brothers and sisters. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"> ♡ Filipino Speech Choir 🎶 ♡</div>
+                    <div class="card-body text-center">
+                        <img src="speech choir.webp" class="card-img-top mx-auto mb-3" alt="Honey BBQ Chicken Wings">
+                        <p>Our speech choir was our culminating event in our Filipino subject in the 3rd quarter. Here, we had to recite "Isang Dipang Langit" of Amado V. Fernandez, a poem about liberation from tyranny. We held many practices to ensure a quality output.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"> ♡ 10 Sapphire's Christmas Party 🎄 ♡</div>
+                    <div class="card-body text-center">
+                        <img src="xmas.webp" class="card-img-top mx-auto mb-3" alt="Pavlova">
+                        <p> Merry Christmas! In our Christmas Party we had a lot of fun playing games like charades, eating lots of good food, taking lots of candid pictures. This party was emceed by Ara and Inigo who made it so fun and enjoyable. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                     <div class="card-header"> ♡ Happy Teacher's Day! 👨🏻‍🏫 ♡</div>
+                    <div class="card-body text-center">
+                        <img src="teachersday.webp" class="card-img-top mx-auto mb-3" alt="Greek Salad">
+                        <p>Happy Teacher's Day from 10-Sapphire! We surprised our class adviser Mr. Hablado with a special cake from Conti's and a custom-made tarpaulin for him. Here, we got really appreciate the efforts and sacrifices of our teachers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">                    
+                    <div class="card-header"> ♡ Intramurals 2026 🏆 ♡</div>
+                    <div class="card-body text-center">
+                        <img src="INTRAMS.JPG" class="card-img-top mx-auto mb-3" alt="Avocado Toast">
+                        <p>Ready, get set, go!  10-Sapphire competed at the 2026 intramurals where we got to showcase our athletic abilities and strengths. We cheered, we won, we lost, but most importantly, we bonded as a class.</p>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                <div class="card-header">  ♡ A Class Celebration! 🍰 ♡</div>
+                    <div class="card-body text-center">
+                        <img src="kleiser.webp" class="card-img-top mx-auto mb-3" alt="Berry Smoothie">
+                        <p>This was a candid day in our class. To celebrate the birthday of our classmate Kleiser, we surprised him with a birthday cake and his dream basketball shoes, a Kobe 9 Protro. He got so emotional and really appreciated our gifts.</p>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

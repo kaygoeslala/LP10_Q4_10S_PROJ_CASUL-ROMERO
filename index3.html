@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>CLASSLIST!!!</title>
+
+<style>
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: url(https://i.pinimg.com/736x/d5/91/b2/d591b20d5b14f4e4bd94511b5cf74bd9.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+    padding-top: 90px;
+    color: #2f4f4f;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #e6f7ff !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: #4aa3d8 !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #7ec8e3 !important;
+}
+
+/* MAIN CONTAINER */
+.container-box {
+    background: white;
+    max-width: 900px;
+    width: 92%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* HEADINGS */
+h1 {
+    color: #4aa3d8;
+    font-weight: bold;
+}
+
+h2 {
+    color: #4aa3d8;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7ec8e3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #4aa3d8;
+    transform: scale(1.02);
+}
+
+/* OUTPUT BOX */
+.output-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f4fbff;
+    border-radius: 10px;
+    border: 1px solid #cceeff;
+    min-height: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR FIXED -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="sapph.jpg" width="40" height="40" class="rounded-circle me-2">
+      <span class="fw-bold" style="color:#4aa3d8;">Sapphire Class</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span>☰</span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index3.html">Classmates</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html">Attendance Tracker</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Gallery</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container-box">
+
+    <h1>My Classmates</h1>
+    <h2>Class of 25–26</h2>
+
+    <input type="text" id="username" placeholder="Name">
+    <input type="text" id="section" placeholder="Section">
+    <input type="text" id="fav" placeholder="Favorite Subject">
+
+    <button py-click="AddClassmate">Add New Classmate</button>
+    <button py-click="ShowClassmates">Show Classlist</button>
+
+    <div class="output-box" id="signed"></div>
+    <div class="output-box" id="classmate-list"></div>
+
+</div>
+
+<script type="py" src="main2.py"></script>
+
+</body>
+</html>

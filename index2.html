@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>Attendance Tracker</title>
+
+<py-config>
+packages = ["matplotlib"]
+</py-config>
+
+<style>
+/* ================= BODY ================= */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: url(https://i.pinimg.com/736x/d5/91/b2/d591b20d5b14f4e4bd94511b5cf74bd9.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+    padding-top: 90px;
+    color: #2f4f4f;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: #e6f7ff !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: #4aa3d8 !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #7ec8e3 !important;
+}
+
+/* ================= MAIN CARD ================= */
+.main-card {
+    background: white;
+    max-width: 850px;
+    width: 95%;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* ================= TEXT ================= */
+h1 {
+    color: #4aa3d8;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ================= INPUTS ================= */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* ================= BUTTON ================= */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7ec8e3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #4aa3d8;
+    transform: scale(1.02);
+}
+
+/* ================= GRAPH ================= */
+#plot {
+    margin-top: 25px;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR (ONLY ONE, FIXED) ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="sapph.jpg" width="40" height="40" class="rounded-circle me-2">
+      <span class="fw-bold" style="color:#4aa3d8;">Sapphire Class</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span>☰</span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index3.html">Classmates</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html">Attendance Tracker</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Gallery</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main-card">
+
+    <h1>Weekly Attendance Tracker</h1>
+
+    <label>Day:</label>
+    <select id="dayInput">
+        <option value="">Select Day</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+    </select>
+
+    <label>Absences:</label>
+    <input type="number" id="absenceInput" placeholder="e.g. 3">
+
+    <button py-click="displaying">Submit</button>
+
+    <div id="plot"></div>
+
+</div>
+
+<script type="py" src="main.py"></script>
+
+</body>
+</html>
+
+
